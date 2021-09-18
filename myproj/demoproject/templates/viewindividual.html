@@ -1,0 +1,47 @@
+<html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/newstudent.css' %}">
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<title>view individual</title>
+<head>
+<script>
+
+	function myfun(){
+	
+		var s1 = document.getElementById("p1").value;
+		if(s1.length==0){
+			alert("Please Enter register number");
+			return false;
+		
+		}
+	}	
+
+</script>
+</head>
+<body>
+<form action="individual" method="post">
+{% csrf_token %}
+
+<div class="container">
+            <form class="form-horizontal" role="form">
+                <h2><u><center>View Individual</center><u></h2>
+				<div class="form-group">
+                    <label for="reg" class="col-sm-3 control-label">Reg.No</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="reg" name="reg" placeholder="Registration Number" class="form-control" id="p1"><br>
+                    </div>             			
+                 </div> <!-- /.form-group -->
+        
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                      <a href="individual">  <button type="submit" class="btn btn-primary btn-block" onclick="return myfun()" >View Details</button></a>
+					  
+                    </div>
+                </div>
+            </form> <!-- /form --> 
+        </div> <!-- ./container -->
+</form>
+</body>
+</html>

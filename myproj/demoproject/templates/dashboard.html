@@ -1,0 +1,59 @@
+<html>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+<title>dashboard</title>
+<head>
+{% load static %}
+<link href="{% static 'css/dashboard.css' %}" rel="stylesheet">   
+</head>
+	<body>
+<div class="nav-side-menu">
+    <div class="brand">College Site</div>
+  
+        <div class="menu-list">
+            
+            <ul   style="font-size:17px">
+                <li>               
+                  <i></i><center><h3> Dashboard</h3></center><br>
+                 
+                </li>
+
+                <li><br>
+                  <a href="newstudent" style="font-size:17px" ><i class="fa fa-gift fa-lg"  ></i>New Student<span class="arrow"></span></a>
+                </li>
+                
+
+                <li data-toggle="collapse" data-target="#service" class="collapsed"><br>
+                  <a href="deletestudent"><i class="fa fa-globe fa-lg"></i> Delete Student <span class="arrow"></span></a>
+                </li>  
+               
+
+
+                <li data-toggle="collapse" data-target="#new" class="collapsed"><br>
+                  <a href="viewstudent"> <i class="fa fa-car fa-lg"></i>View Student<span class="arrow"></span></a>    
+                </li>
+               
+
+                 <li data-toggle="collapse" data-target="#detailsCollapse" class="collapsed"><br>
+                  <a href="viewindividual">
+                     <i class="fa fa-user fa-lg"></i>view Individual <span class="arrow"></span>
+                  </a>
+                  </li>
+                 
+                <li data-toggle="collapse" data-target="#detailsCollapse" class="collapsed"><br>
+                  <a href="update">
+                     <i class="fa fa-user fa-lg"></i>Update Student <span class="arrow"></span>
+                  </a>
+                  </li><br>
+                  
+             
+                </li>
+            </ul>
+     </div>
+	 
+</div>
+<img align="center" src="{% static 'img/a3.png' %}" alt="collage"  width="1000"  height="575"  style="float:right"/>
+</body>
+</html>

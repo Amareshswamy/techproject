@@ -1,0 +1,95 @@
+<html>
+<title>update stuudent</title>
+<head>
+<script>
+	function myfun(){
+	
+		var s1 = document.getElementById("p1").value;
+		if(s1.length==0){
+			alert("Please Enter register number");
+			return false;
+		
+		}
+	}
+
+
+</script>
+</head>
+<body>
+<form action="update" method="post">
+
+{% csrf_token %}
+
+<center>
+<h2><u>UPDATE STUDENT</u></h2>
+</center>
+
+<table>
+
+<tr>
+<td>REG.NO:</td>
+<td><input type="text" name="reg" id="p1"  /></td>
+</tr>
+
+<tr><br>
+<td><br>NAME:</td>
+<td><br><input type="text" name="name" /></td>
+</tr>
+
+<tr><br>
+<td><br>FATHER NAME:</td>
+<td><br><input type="text" name="father name" /></td>
+</tr>
+
+<tr>
+<td><br>CONTACT:</td>
+<td><br><input type="text" name="contact"  /></td>
+</tr>
+
+<tr>
+<td> <label><br>BRANCH:</label></td><br>
+<td>
+<br><select name="branch">  
+<option value = "CSE" > Computer science eng
+</option> 
+<option value = "ECE" > Electronics and eng
+</option> 
+<option value = "CV" > Civil eng
+</option>
+<option value = "ME" > Mechanical eng
+</option>
+</select>  
+</td>
+</tr>
+</table>
+
+<tr>
+<td>
+<label><br>GENDER</b></label>
+<input type="radio"  name="gender" value="MALE">
+  <label for="male">MALE</label></td>
+  <input type="radio" name="gender" value="FEMALE">
+  <label for="female">FEMALE</label>
+  <input type="radio" name="gender" value="OTHERS">
+  <label for="others">OTHERS</label>
+</td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+<td>
+<br><label for="address">ADDRESS:</label> 
+<br><input type="text" name="address" style="width:400px; height:110px;"  />
+     </label> 
+</td>
+</tr>
+
+<tr>
+<td><br><input type="submit" name="register" style="width:150px; height:40px" value="UPDATE STUDENT" onclick="return myfun()"><br><br><br></td>
+</tr>
+</table>
+</form>
+</body>
+</html>

@@ -1,0 +1,80 @@
+
+/* Table css Start */
+a.del
+{
+    background:#d9534f;
+    border-radius: 2px; 
+    width: 3px;
+    height:2px; 
+    padding-left:30px;
+    line-height:10px;
+}
+
+a.edit
+{
+    padding-left:10px;
+    background:#337ab7;
+    color:#A9A9A9;
+    border-radius:2px;
+    border:5px;
+}
+
+tr.row-name
+{
+    font-size: 18px;
+    color:#448aff;
+}
+
+tr.row-content
+{
+    color:#6c7173;
+}
+
+table
+{
+    border-bottom: 8px solid #FF7F50;
+	 border-top: 8px solid #FF7F50;
+}
+
+td.check
+{
+    text-align: center;
+}
+
+.table-striped>tbody>tr:nth-of-type(odd)
+{
+    background:#F5F5DC!important; 
+}
+
+a.btn-danger:hover
+{
+    background: #de6c69;
+}
+
+a.btn-danger
+{
+    background:#1E90FF;  
+}
+
+a.btn-top
+{
+    background:#448aff;
+    color:#fff;
+    border:1px solid #448aff; 
+    padding: 10px 20px; 
+    border-radius:4px; 
+}
+
+a.btn-top:hover
+{
+    text-decoration: none;
+    box-shadow:3px 3px 5px #222; 
+    transition:box-shadow 0.5s; 
+}
+th, td {
+  padding: 15px;
+  text-align: left;
+}
+
+
+/* Table css End */

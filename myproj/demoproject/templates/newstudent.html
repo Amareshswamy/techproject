@@ -1,0 +1,107 @@
+<html>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/newstudent.css' %}">
+</head>
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<title>New stuudent</title>
+</script>
+</head>
+<body>
+<form action="register" method="post">
+{% csrf_token %}
+
+
+<div class="container">
+            <form class="form-horizontal" role="form">
+                <h2><u><center>Registration Form</center><u></h2>
+				<div class="form-group">
+                    <label for="Reg.no" class="col-sm-3 control-label">Reg.No</label>
+                    <div class="col-sm-9">
+                        <input type="text" id="reg" name="reg" placeholder="Registration Number" class="form-control"><br>
+                    </div>
+					
+                <div class="form-group">
+                    <label for="name" class="col-sm-3 control-label">Name</label><br>
+                    <div class="col-sm-9">
+                        <input type="text" id="name"  name="name" placeholder="Full Name" class="form-control" autofocus><br>
+                        <span class="help-block">Last Name, First Name, eg.: Smith, Harry</span>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="email" class="col-sm-3 control-label">Father name</label><br>
+                    <div class="col-sm-9">
+                        <input type="text" id="father name"  name="father name" placeholder="Father Name" class="form-control"><br>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="contact" class="col-sm-3 control-label">Contact</label><br>
+                    <div class="col-sm-9">
+                        <input type="text" id="contact"  name="contact" placeholder="Contact" class="form-control"><br>
+                    </div>
+
+                <div class="form-group">
+                    <label for="branch"  class="col-sm-3 control-label">Branch</label><br><br>
+                    <div class="col-sm-9">
+                        <select id="branch"   name="branch" class="form-control"><br><br>
+                            <option>CS Engg</option>
+                            <option>E&C Eng</option>
+                            <option>E&E Eng</option>
+                            <option>Mechnical Eng</option>
+                            <option>Civil Eng</option>
+                            <option>Chemical Eng</option>
+                            <option>Aerospace Eng</option>
+                            <option>Enviornmental Eng</option>
+                        </select>
+                    </div>
+                </div> <!-- /.form-group -->
+				<div class="form-group">
+                    <label for="Address" class="col-sm-3 control-label">Address</label><br><br>
+                    <div class="col-sm-9">
+                        <input type="text" id="address"  name="address" placeholder="Address" class="form-control" height="70" ><br>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="control-label col-sm-3">Gender</label><br>
+                    <div class="col-sm-6">
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="femaleRadio" name="gender" value="Female">Female
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="maleRadio"  name="gender" value="Male">Male
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <label class="radio-inline">
+                                    <input type="radio" id="uncknownRadio"  name="gender" value="Unknown">Unknown
+                                </label>
+                            </div>
+
+                        </div>
+                    </div>
+                </div> <!-- /.form-group -->
+              
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <div class="checkbox">
+                            <label>
+                                <input type="checkbox">I accept <a href="#">terms</a>
+                            </label>
+                        </div>
+                    </div>
+                </div> <!-- /.form-group -->
+                <div class="form-group">
+                    <div class="col-sm-9 col-sm-offset-3">
+                        <button type="submit" class="btn btn-primary btn-block">Register</button>
+                    </div>
+                </div>
+            </form> <!-- /form -->
+        </div> <!-- ./container -->
+</form>
+</body>
+</html>

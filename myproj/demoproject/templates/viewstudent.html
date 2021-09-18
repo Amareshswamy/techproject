@@ -1,0 +1,54 @@
+<html>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <head>
+	{% load static %}
+	
+      <title> Table </title>
+      <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet"> 
+	  <link rel="stylesheet" type="text/css" href="{% static 'css/viewstudent.css' %}">
+    </head>
+    <body>
+    	
+        <h2 style="color: #448aff;text-align: center;"><U> Student Table</U> </h2>
+<hr>
+  <table class="table table-striped">
+    	
+      
+     
+  </div>
+</div>
+  
+     
+
+<td><b>Reg.no</b></td>
+<td><b>Name</b></td>
+<td><b>Father Name</b></td>
+<td><b><b>Contact</b></td>
+<td><b>Branch</b></td>
+<td><b>Gender</b></td>
+<td><b>Address</b></td>
+
+
+{% for sts in res %}
+
+<tr>
+<td>{{sts.0}}</td>
+<td>{{sts.1}}</td>
+<td>{{sts.2}}</td>
+<td>{{sts.3}}</td>
+<td>{{sts.4}}</td>
+<td>{{sts.5}}</td>
+<td>{{sts.6}}</td>
+<td>{{sts.7}}</td>
+</tr>
+
+{% endfor %}
+</table>
+     </tbody>
+	
+  </table>
+
+    </body>
+</html>

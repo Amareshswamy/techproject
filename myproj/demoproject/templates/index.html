@@ -1,0 +1,66 @@
+<html>
+<head>
+{% load static %}
+<link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+<script>
+
+	function myfun(){
+	
+		var s1 = document.getElementById("p1").value;
+		if(s1.length==0){
+			alert("Please Enter UserName");
+			return false;
+		
+		}
+		
+	var s2 = document.getElementById("p2").value;
+		if(s2.length==0){
+			alert("Please Enter password");
+			return false;
+		}	
+	
+	}
+
+
+</script>
+</head>
+<body >
+<form action="verify" method="post">
+
+{% csrf_token %}
+
+<div id="login">
+        <h3 class="text-center text-white pt-5">Login form</h3>
+        <div class="container">
+            <div id="login-row" class="row justify-content-center align-items-center">
+                <div id="login-column" class="col-md-6">
+                    <div id="login-box" class="col-md-12">
+                        <form id="login-form" class="form" action="" method="post">
+                            <h3 class="text-center text-info">Login</h3>
+                            <div class="form-group">
+							
+                                <label for="username" class="text-info">Username:</label><br>
+                                <input type="text" name="username" id="p1" class="form-control" >
+                            </div>
+							
+                            <div class="form-group">
+                                <label for="password" class="text-info">Password:</label><br>
+                                <input type="password" name="password" id="p2" class="form-control"  >
+                            </div>
+							
+                            <div class="form-group">
+                                <label for="remember-me" class="text-info"><span>Remember me</span> <span><input id="remember-me" name="remember-me" type="checkbox"></span></label><br>
+                                <input type="submit" name="submit" class="btn btn-info btn-md" value="submit" onclick="return myfun()" >
+                            </div>
+							
+                            <div id="register-link" class="text-right" >
+                                <a href="newstudent" class="text-info">Register here</a>
+                            </div>							
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+</body>
+</html>
